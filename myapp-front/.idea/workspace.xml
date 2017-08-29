@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df2dcefe-156c-4b18-8cc0-2c27fdcec0aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/tianrenjie.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/myapp-front.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../myapp/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../myapp/dao/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../myapp/dao/userDao.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../myapp/model/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../myapp/model/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../myapp/routes/indexAPI.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../myapp/service/userService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapp/app.js" afterPath="$PROJECT_DIR$/../myapp/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../myapp/bin/www" afterPath="$PROJECT_DIR$/../myapp/bin/www" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,9 +61,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="532" />
-    <option name="y" value="31" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="453" />
+    <option name="y" value="39" />
     <option name="width" value="1303" />
     <option name="height" value="966" />
   </component>
@@ -138,7 +124,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myapp" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -163,15 +149,15 @@
       <option name="presentableId" value="Default" />
       <updated>1503991655117</updated>
       <workItem from="1503991656225" duration="359000" />
-      <workItem from="1503992039439" duration="640000" />
+      <workItem from="1503992039439" duration="655000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="999000" />
+    <option name="totallyTimeSpent" value="1014000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="532" y="31" width="1303" height="966" extended-state="0" />
+    <frame x="453" y="39" width="1303" height="966" extended-state="1" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980237" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

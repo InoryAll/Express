@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9dcc72b-0dbd-466e-8607-28432d5cdced" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp-front/.idea/dictionaries/tianrenjie.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp-front/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp-front/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp-front/.idea/myapp-front.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp-front/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/dao/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/dao/userDao.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/model/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/model/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/routes/indexAPI.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/service/userService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/app.js" afterPath="$PROJECT_DIR$/myapp/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/bin/www" afterPath="$PROJECT_DIR$/myapp/bin/www" />
-    </list>
+    <list default="true" id="c9dcc72b-0dbd-466e-8607-28432d5cdced" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -53,8 +37,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myapp/model/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -303,12 +287,12 @@
       <option name="presentableId" value="Default" />
       <updated>1503881226327</updated>
       <workItem from="1503881228294" duration="6836000" />
-      <workItem from="1503968070356" duration="6589000" />
+      <workItem from="1503968070356" duration="6803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13425000" />
+    <option name="totallyTimeSpent" value="13639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="124" y="29" width="1553" height="966" extended-state="0" />
@@ -524,8 +508,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/model/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding />
         </state>
       </provider>
