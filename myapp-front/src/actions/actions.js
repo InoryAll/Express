@@ -2,6 +2,7 @@
  *action
  */
 import 'isomorphic-fetch';
+import {Modal} from 'antd';
 
 // login
 export const ADD_USER='ADD_USER';
@@ -52,6 +53,49 @@ export const getAllUsers=()=>{
         }).then((data)=>{
             dispatch(getAllUser(data));
         }).catch((e) => {
+            console.log(e.message);
+        });
+    };
+};
+
+export const UPDATE_USERINFO='UPDATE_USERINFO';
+export const updateUserInfo=(user)=>{
+    return {
+        type:UPDATE_USERINFO,
+        user
+    };
+};
+export const updateUser=(user)=>{
+    return (dispatch,getState)=>{
+        fetch('http://localhost:8080/api/updateUser',{
+            method:'POST',
+            body:JSON.stringify(user),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }).then((response) => {
+            if (response.ok){
+                return response.json();
+            }
+        }).then((data)=>{
+            console.log(data);
+            if (data.code==='1'){
+                const modal=Modal.success({
+                    title:'成功',
+                    content:'更新成功!'
+                });
+                setTimeout(function () {
+                    modal.destroy();
+                },1000);
+                dispatch(updateUserInfo(user));
+            }
+            else{
+                Modal.success({
+                    title:'失败',
+                    content:'更新失败，请重试!'
+                });
+            }
+        }).catch((e)=>{
             console.log(e.message);
         });
     };

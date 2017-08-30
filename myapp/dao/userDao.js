@@ -14,6 +14,12 @@ exports.add=function (username,password,callback) {
     user.save(callback);
 };
 
+exports.update=function (user,callback) {
+    var _id = user._id;
+    delete user._id;
+    User.update({_id:_id},user,callback);
+};
+
 exports.get=function (callback) {
     User.find(callback);
 };

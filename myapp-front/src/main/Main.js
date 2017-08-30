@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Card,Table,Row,Col} from 'antd';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {getAllUsers} from "../actions/actions";
+import {getAllUsers,updateUser} from "../actions/actions";
 
 class Main extends React.Component{
 
@@ -12,6 +12,9 @@ class Main extends React.Component{
         this.props.getAllUsers();
     }
 
+    handleUpdate=(record) => {
+        this.props.updateUser(record);
+    };
 
     render(){
         const columns = [{
@@ -27,7 +30,7 @@ class Main extends React.Component{
             key: 'action',
             render: (text, record,index) => (
                 <span>
-                  <a href="#">修改</a>
+                  <a href="#" onClick={()=>{this.handleUpdate(record)}}>修改</a>
                   <span className="ant-divider" />
                    <a href="#">删除</a>
                 </span>
@@ -58,7 +61,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ getAllUsers },dispatch);
+    return bindActionCreators({ getAllUsers , updateUser },dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Main);
