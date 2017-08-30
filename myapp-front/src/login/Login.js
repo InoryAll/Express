@@ -4,6 +4,9 @@ import { Form, Icon, Input, Button, Checkbox, Row, Col, Card } from 'antd';
 import 'antd/dist/antd.min.css';
 import './login.css';
 import {browserHistory} from 'react-router';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {insertNewUser} from "../actions/actions";
 
 const FormItem = Form.Item;
 
@@ -13,7 +16,12 @@ class Login extends React.Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                browserHistory.push('/detail');
+                const user={
+                    username:values.username,
+                    password:values.password
+                };
+                this.props.insertNewUser(user);
+               /* browserHistory.push('/detail');*/
             }
         });
     };
@@ -60,6 +68,16 @@ class Login extends React.Component {
     }
 }
 
+function mapStateToProps(state) {
+    return {
+        user:state.login.user
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({insertNewUser},dispatch);
+}
+
 const LoginForm = Form.create()(Login);
 
-export default LoginForm;
+export default connect(mapStateToProps,mapDispatchToProps)(LoginForm);

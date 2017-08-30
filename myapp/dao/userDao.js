@@ -15,5 +15,5 @@ exports.add=function (username,password,callback) {
 };
 
 exports.get=function (callback) {
-    User.find({},callback);
+    User.find(callback);
 };
