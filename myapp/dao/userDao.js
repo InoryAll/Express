@@ -2,7 +2,7 @@
  *userDao
  */
 
-var model=require('../model');
+var model=require('../model/index');
 var User=model.User;
 
 exports.add=function (username,password,callback) {
