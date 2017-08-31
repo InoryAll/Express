@@ -6,21 +6,21 @@ var mail=require('../util/mail');
 
 var options={
     from : 'Inory 110873204@qq.com',
-    to : 'wrf 1156581134@qq.com',
+    to : 'wrf 1325741380@qq.com',
     cc : '',
     bcc : '',
-    subject : '一封来自Inory的邮件',
-    text : '一封来自Inory的邮件',
-    html : '<h1>你好，这里来自Inory的一封信件!</h1><div><img src=\'cid:01\' style=\'width:200px;height:auto\'></div>',
+    subject : '润儿',
+    text : '一封来自田田田的邮件',
+    html : '<h1>喜欢你!最喜欢你了!</h1><div><img src=\'cid:01\' style=\'width:200px;height:auto\'></div>',
     attachments :
         [
             {
-                filename:'storyService.js',
-                path:'./service/storyService.js'
+                filename:'wrf.txt',
+                path:'./public/wrf.txt'
             },
             {
-                filename:'test2.jpg',
-                path:'./public/images/test2.jpg',
+                filename:'timg.jpg',
+                path:'./public/images/timg.jpg',
                 cid:'01'
             }
         ]
