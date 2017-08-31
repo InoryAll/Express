@@ -6,7 +6,7 @@ import './login.css';
 import {browserHistory} from 'react-router';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {insertNewUser,getAllStories} from "../actions/actions";
+import {insertNewUser,getAllStories,doSendMail} from "../actions/actions";
 
 const FormItem = Form.Item;
 
@@ -14,8 +14,12 @@ class Login extends React.Component {
 
     constructor(props){
         super(props);
-        this.props.getAllStories();
+        /*this.props.getAllStories();*/
     }
+
+    handleSendMail=() => {
+        this.props.doSendMail();
+    };
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -59,11 +63,11 @@ class Login extends React.Component {
                                 })(
                                     <Checkbox>记住账号</Checkbox>
                                 )}
-                                <a className="login-form-forgot" href="">忘记密码</a>
+                                <a className="login-form-forgot" href="#" onClick={()=>{this.handleSendMail()}}>发送邮件</a>
                                 <Button type="primary" htmlType="submit" className="login-form-button">
                                     登录
                                 </Button>
-                                Or <a href="">立即注册!</a>
+                                Or <a href="#">立即注册!</a>
                             </FormItem>
                         </Form>
                     </Card>
@@ -81,7 +85,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({insertNewUser , getAllStories},dispatch);
+    return bindActionCreators({insertNewUser , getAllStories , doSendMail},dispatch);
 }
 
 const LoginForm = Form.create()(Login);

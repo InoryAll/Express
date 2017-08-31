@@ -61,6 +61,36 @@ export const getAllStories=() => {
     };
 };
 
+export const SEND_MAIL='SEND_MAIL';
+export const sendMail=()=>{
+    return {
+        type:SEND_MAIL
+    };
+};
+export const doSendMail=() => {
+    return (dispatch,getState)=>{
+        fetch('http://localhost:8080/api/sendMail',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            }
+        }).then((response) => {
+            if (response.ok){
+                return response.json();
+            }
+        }).then((data) => {
+            console.log(data);
+            dispatch(sendMail());
+            Modal.success({
+                title:'成功',
+                content:'发送邮件成功!'
+            });
+        }).catch((e) => {
+            console.log(e.message);
+        });
+    };
+};
+
 
 // main
 export const GET_ALL_USER='GET_ALL_USER';
