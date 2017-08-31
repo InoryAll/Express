@@ -88,6 +88,7 @@ export const updateUser=(user)=>{
                     modal.destroy();
                 },1000);
                 dispatch(updateUserInfo(user));
+                dispatch(getAllUsers());
             }
             else{
                 Modal.success({
@@ -97,6 +98,47 @@ export const updateUser=(user)=>{
             }
         }).catch((e)=>{
             console.log(e.message);
+        });
+    };
+};
+
+export const DELETE_USERINFO='DELETE_USERINFO';
+export const deleteUserInfo=()=>{
+    return {
+        type:DELETE_USERINFO
+    };
+};
+export const deleteUser=(user)=>{
+    return (dispatch,getState)=>{
+        fetch('http://localhost:8080/api/deleteUser',{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(user)
+        }).then((response) => {
+            if (response.ok){
+                return response.json();
+            }
+        }).then((data) => {
+            console.log(data);
+            if (data.code==='1'){
+                const modal=Modal.success({
+                    title:'成功',
+                    content:'更新成功!'
+                });
+                setTimeout(function () {
+                    modal.destroy();
+                },1000);
+                dispatch(deleteUserInfo());
+                dispatch(getAllUsers());
+            }
+            else{
+                Modal.success({
+                    title:'失败',
+                    content:'更新失败，请重试!'
+                });
+            }
         });
     };
 };

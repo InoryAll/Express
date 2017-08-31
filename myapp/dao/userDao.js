@@ -20,6 +20,10 @@ exports.update=function (user,callback) {
     User.update({_id:_id},user,callback);
 };
 
+exports.delete=function (user,callback) {
+    User.remove({_id:user._id},callback);
+};
+
 exports.get=function (callback) {
     User.find(callback);
 };

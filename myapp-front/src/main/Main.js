@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import {Card,Table,Row,Col} from 'antd';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {getAllUsers,updateUser} from "../actions/actions";
+import {getAllUsers,updateUser,deleteUser} from "../actions/actions";
+import _ from 'lodash';
 
 class Main extends React.Component{
 
@@ -13,7 +14,13 @@ class Main extends React.Component{
     }
 
     handleUpdate=(record) => {
-        this.props.updateUser(record);
+        const user=_.cloneDeep(record);
+        user.username='wrf';
+        this.props.updateUser(user);
+    };
+
+    handleDelete=(record) => {
+        this.props.deleteUser(record);
     };
 
     render(){
@@ -30,12 +37,13 @@ class Main extends React.Component{
             key: 'action',
             render: (text, record,index) => (
                 <span>
-                  <a href="#" onClick={()=>{this.handleUpdate(record)}}>修改</a>
-                  <span className="ant-divider" />
-                   <a href="#">删除</a>
+                    <a href="#" onClick={()=>{this.handleUpdate(record)}}>修改</a>
+                    <span className="ant-divider" />
+                    <a href="#" onClick={()=>{this.handleDelete(record)}}>删除</a>
                 </span>
             ),
         }];
+
 
         const data = this.props.users;
 
@@ -61,7 +69,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ getAllUsers , updateUser },dispatch);
+    return bindActionCreators({ getAllUsers , updateUser , deleteUser},dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Main);

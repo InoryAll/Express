@@ -20,6 +20,7 @@ connection.on('error',function (err) {
 
 // 导出models
 require('./user');
+require('./story');
 
 exports.User=mongoose.model('User');
-
+exports.Story=mongoose.model('Story');

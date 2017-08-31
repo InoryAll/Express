@@ -34,6 +34,21 @@ exports.updateUser=function (req,res,next) {
     })
 };
 
+exports.deleteUser=function (req,res,next) {
+    console.log('deleteUser');
+    var user=req.body;
+    console.log(user);
+    userDao.delete(user,function (err,message) {
+        if (!err) {
+            message = {code: '1', message: 'success deleted!'};
+        }
+        else{
+            message={code:'0',message:'failed!'};
+        }
+        return res.json(message);
+    });
+};
+
 
 exports.getAll=function (req,res,next) {
     console.log('getAllUsers');
