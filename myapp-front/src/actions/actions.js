@@ -34,6 +34,34 @@ export const insertNewUser=(user) => {
     };
 };
 
+export const FIND_STORIES='FIND_STORIES';
+export const findStories=(stories)=> {
+    return {
+        type:FIND_STORIES,
+        stories
+    };
+};
+export const getAllStories=() => {
+    return (dispatch,getState)=>{
+        fetch('http://localhost:8080/api/getStories',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            }
+        }).then((response)=>{
+            if (response.ok){
+                return response.json();
+            }
+        }).then((data) => {
+            console.log(data);
+            dispatch(findStories(data));
+        }).catch((e)=>{
+            console.log(e.message);
+        });
+    };
+};
+
+
 // main
 export const GET_ALL_USER='GET_ALL_USER';
 export const getAllUser=(users) => {
@@ -139,6 +167,8 @@ export const deleteUser=(user)=>{
                     content:'更新失败，请重试!'
                 });
             }
+        }).catch((e) => {
+            console.log(e.message);
         });
     };
 };

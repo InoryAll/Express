@@ -3,10 +3,10 @@
  */
 var storyDao=require('../dao/storyDao');
 
-exports.getAll=function (res,req,next) {
-    storyDao.find(function (err,storys) {
-        console.log(storys);
-        return res.json(storys);
+exports.getAll=function (req,res,next) {
+    storyDao.find(function (err,stories) {
+        console.log(stories);
+        return res.json(stories);
     });
 };
 

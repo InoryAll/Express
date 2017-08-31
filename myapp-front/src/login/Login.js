@@ -6,11 +6,17 @@ import './login.css';
 import {browserHistory} from 'react-router';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {insertNewUser} from "../actions/actions";
+import {insertNewUser,getAllStories} from "../actions/actions";
 
 const FormItem = Form.Item;
 
 class Login extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.props.getAllStories();
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -75,7 +81,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({insertNewUser},dispatch);
+    return bindActionCreators({insertNewUser , getAllStories},dispatch);
 }
 
 const LoginForm = Form.create()(Login);
