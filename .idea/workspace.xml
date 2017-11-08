@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9dcc72b-0dbd-466e-8607-28432d5cdced" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/service/mailService.js" afterPath="$PROJECT_DIR$/myapp/service/mailService.js" />
-    </list>
+    <list default="true" id="c9dcc72b-0dbd-466e-8607-28432d5cdced" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -165,7 +163,7 @@
     <handled-path value="$PROJECT_DIR$/myapp-front/node_modules" />
     <handled-path value="$PROJECT_DIR$/myapp/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="124" />
     <option name="y" value="29" />
     <option name="width" value="1553" />
@@ -270,15 +268,15 @@
       <workItem from="1503881228294" duration="6836000" />
       <workItem from="1503968070356" duration="6803000" />
       <workItem from="1505124176277" duration="24000" />
-      <workItem from="1510102148438" duration="131000" />
+      <workItem from="1510102148438" duration="758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13794000" />
+    <option name="totallyTimeSpent" value="14421000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="124" y="29" width="1553" height="966" extended-state="0" />
+    <frame x="124" y="29" width="1553" height="966" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24884489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
