@@ -11,7 +11,7 @@ var options={
     bcc : '',
     subject : '润儿',
     text : '一封来自田田田的邮件',
-    html : '<h1>喜欢你!最喜欢你了!</h1><div><img src=\'cid:01\' style=\'width:200px;height:auto\'></div>',
+    html : '<h1>XXXXXXXXXXXX</h1><div><img src=\'cid:01\' style=\'width:200px;height:auto\'></div>',
     attachments :
         [
             {
